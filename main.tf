@@ -10,4 +10,8 @@ terraform {
       version = "~> 4.9.0"
     }
   }
+  backend "gcs" {
+   bucket  = "gitops-tfstate-bucket"
+   prefix  = "terraform/state"
+ }
 }
